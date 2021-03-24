@@ -121,3 +121,13 @@ nav .navbar-brand{
 .footer p {
     color: white;
 }
+/*tournament page*/
+.text-block{
+    padding: 0px 20px 0px 22px;
+}
+.hero-img{
+    max-width: 1200px;
+    margin: -40px auto 0px;
+    display: block;
+   
+}
