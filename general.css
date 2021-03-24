@@ -19,7 +19,7 @@ p {
 
 h1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 26pt;
+    font-size: 24pt;
     color: #083351;
     font-weight: 800;
     line-height: 34pt;
@@ -27,11 +27,38 @@ h1 {
 
 h4 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 18pt;
+    font-size: 16pt;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13pt;
+    color: #083351;
+    font-weight: 300;
+}
+h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12pt;
     color: #083351;
     font-weight: 500;
 }
 
+/*navigation*/
+nav{
+    padding: 5px 40px 5px 40px;
+}
+nav .navbar-brand{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26pt;
+    color: #083351;
+    font-weight: 800;
+    line-height: 34pt;
+}
+
+
+/*buttons*/
 .buttons {
     max-width: 130px;
     margin: 10px auto;
@@ -42,8 +69,39 @@ h4 {
     font-weight: 500;
     background-color: #fca103;
 }
+.like-btn{
+    width: 70px;
+    padding: 0px;
+    margin: 0px 0px;
+}
 
+/*thumbnails*/
+.thumbnail a{
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+.thumbnail p{
+    padding-top: 5px;
+}
+.caption {
+    padding: 10px 10px 4px 10px;
+    background-color: #e9edf0;
+}
 
+/*event sections*/
+.eventSection {
+    margin: 30px 0px 15px 12px; 
+    height: 50px;
+    padding: 12px 0px 10px 20px;
+}
+#upcoming {
+    background-color: #0091b5;
+}
+#staffPicks {
+    background-color: #709c02;
+}
+
+/*footer*/
 .footer {
     position: sticky;
     left: 0;

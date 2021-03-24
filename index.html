@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,82 +12,251 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;800&display=swap" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="general.css" rel="stylesheet">
+    <!-- Font awesome icons -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="">
     <title>Budokai</title>
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">BUDOKAI</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home<span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Add Event</a>
+                </li>
+
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Logout</a>
+                </li>
+            </ul>
+
+        </div>
+        <h5>eSports Tournaments and Events Platform</h5>
+    </nav>
+
     <div class="body-wrapper">
-        <h1>BUDOKAI</h1>
-        <h4>eSports Tournaments</h4>
         <br>
         <div class="buttons">
             <button href="" class="btn"> ADD EVENT </button>
         </div>
-        <div class="row">
-            <h6>Upcoming Tournaments</h6>
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <a href="#">
-                        <img src="SpringK.png" alt="Spring Kick" style="width:100%">
+        <div>
+            <div class="row">
+                <div id="upcoming" class="eventSection">
+                    <h4>Upcoming Tournaments</h4>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <a href="#">
+                        <img src="img/SpringK.png" alt="Spring Kick" style="width:100%">
                             <div class="caption">
-                              <p>Spring Kick 2021</p>
+                                <h6>Spring Kick 2021</h6>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                    <p><i class="fa fa-calendar"></i> Fri, Apr 2nd</p>
+                                </div>
+                                    <div class="col-md-4">
+                                    <p><i class="fa fa-clock-o"></i> 9PM CET</p>
+                                </div>
+                                    <div class="col-md-4">
+                                    <button href="" class="btn like-btn"><i class="fa fa-thumbs-up"> 24</i> </button>
+                                </div>
+                              </div>
                             </div>
                     </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <a href="#">
+                        <img src="img/2.png" alt="Rocket League" style="width:100%">
+                            <div class="caption">
+                                <h6>Rocket League Local</h6>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                    <p><i class="fa fa-calendar"></i> Tue, Apr 6th</p>
+                                </div>
+                                    <div class="col-md-4">
+                                    <p><i class="fa fa-clock-o"></i> 6PM EST</p>
+                                </div>
+                                    <div class="col-md-4">
+                                    <button href="" class="btn like-btn"><i class="fa fa-thumbs-up"> 33</i> </button>
+                                </div>
+                              </div>
+                            </div>
+                    </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <a href="#">
+                        <img src="img/Minecraft.png" alt="Minecraft" style="width:100%">
+                            <div class="caption">
+                                <h6>Minecraft Creative Build Tournament</h6>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                    <p><i class="fa fa-calendar"></i> Sat, Apr 11th</p>
+                                </div>
+                                    <div class="col-md-4">
+                                    <p><i class="fa fa-clock-o"></i> 9PM EST</p>
+                                </div>
+                                    <div class="col-md-4">
+                                    <button href="" class="btn like-btn"><i class="fa fa-thumbs-up"> 16</i> </button>
+                                </div>
+                              </div>
+                            </div>
+                    </a>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <a href="#">
-                        <img src="2.png" alt="" style="width:100%">
-                        <div class="caption">
-                          <p>Rocket League Local</p>
-                        </div>
+            <br>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <a href="#">
+                        <img src="img/DTN2019.jpeg" alt="Defend the North" style="width:100%">
+                            <div class="caption">
+                                <h6>Defend the North</h6>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                    <p><i class="fa fa-calendar"></i> Sun, Apr 4th</p>
+                                </div>
+                                    <div class="col-md-4">
+                                    <p><i class="fa fa-clock-o"></i> 9PM EST</p>
+                                </div>
+                                    <div class="col-md-4">
+                                    <button href="" class="btn like-btn"><i class="fa fa-thumbs-up"> 122</i> </button>
+                                </div>
+                              </div>
+                            </div>
                     </a>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <a href="#">
-                        <img src="Minecraft.png" alt="Minecraft" style="width:100%">
-                        <div class="caption">
-                          <p>Minecraft Creative Build Tournament</p>
-                        </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <a href="#">
+                        <img src="img/chess.jpg" alt="Chess tournament" style="width:100%">
+                            <div class="caption">
+                                <h6>Chess tournament</h6>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                    <p><i class="fa fa-calendar"></i> Mon, Apr 5th</p>
+                                </div>
+                                    <div class="col-md-4">
+                                    <p><i class="fa fa-clock-o"></i> 5PM EST</p>
+                                </div>
+                                    <div class="col-md-4">
+                                    <button href="" class="btn like-btn"><i class="fa fa-thumbs-up"> 10</i> </button>
+                                </div>
+                              </div>
+                            </div>
                     </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <a href="#">
+                        <img src="img/LMBM.jpg" alt="Let's Make Big Moves" style="width:100%">
+                            <div class="caption">
+                                <h6>Let's Make Big Moves</h6>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                    <p><i class="fa fa-calendar"></i> Sun, Apr 4th</p>
+                                </div>
+                                    <div class="col-md-4">
+                                    <p><i class="fa fa-clock-o"></i> 5PM EST</p>
+                                </div>
+                                    <div class="col-md-4">
+                                    <button href="" class="btn like-btn"><i class="fa fa-thumbs-up"> 45</i> </button>
+                                </div>
+                              </div>
+                            </div>
+                    </a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <h6>Upcoming Tournaments</h6>
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <a href="#">
-                        <img src="DTN2019.jpeg" alt="Defend the North" style="width:100%">
+        <div>
+            <div class="row">
+                <div id="staffPicks" class="eventSection">
+                    <h4>Staff Picks</h4>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <a href="#">
+                        <img src="img/fortnite.jpg" alt="fortnite" style="width:100%">
                             <div class="caption">
-                              <p>Defend the North</p>
+                                <h6>Fortnite</h6>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                    <p><i class="fa fa-calendar"></i> Fri, Apr 16th</p>
+                                </div>
+                                    <div class="col-md-4">
+                                    <p><i class="fa fa-clock-o"></i> 9PM CET</p>
+                                </div>
+                                    <div class="col-md-4">
+                                    <button href="" class="btn like-btn"><i class="fa fa-thumbs-up"> 19</i> </button>
+                                </div>
+                              </div>
                             </div>
                     </a>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <a href="#">
-                        <img src="chess.jpg" alt="" style="width:100%">
-                        <div class="caption">
-                          <p>Chess tournament</p>
-                        </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <a href="#">
+                        <img src="img/GarenaWorld.png" alt="Call of Duty" style="width:100%">
+                            <div class="caption">
+                                <h6>Call of Duty | Mobile</h6>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                    <p><i class="fa fa-calendar"></i> Tue, Apr 6th</p>
+                                </div>
+                                    <div class="col-md-4">
+                                    <p><i class="fa fa-clock-o"></i> 6PM EST</p>
+                                </div>
+                                    <div class="col-md-4">
+                                    <button href="" class="btn like-btn"><i class="fa fa-thumbs-up"> 39</i> </button>
+                                </div>
+                              </div>
+                            </div>
                     </a>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <a href="#">
-                        <img src="LMBM.jpg" alt="Let's Make Big Moves" style="width:100%">
-                        <div class="caption">
-                          <p>Let's Make Big Moves</p>
-                        </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <a href="#">
+                        <img src="img/Wild-Rift.jpg" alt="LOL Wild-Rift" style="width:100%">
+                            <div class="caption">
+                                <h6>League of Legends | Wild-Rift</h6>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                    <p><i class="fa fa-calendar"></i> Sat, Apr 11th</p>
+                                </div>
+                                    <div class="col-md-4">
+                                    <p><i class="fa fa-clock-o"></i> 6PM EST</p>
+                                </div>
+                                    <div class="col-md-4">
+                                    <button href="" class="btn like-btn"><i class="fa fa-thumbs-up"> 57</i> </button>
+                                </div>
+                              </div>
+                            </div>
                     </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -95,7 +265,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-txt">
-            <p class="copyright">Copyright &copy; Team 16 | 2020</p>
+            <p class="copyright">Copyright &copy; Team 16 | 2021</p>
         </div>
     </footer>
 
