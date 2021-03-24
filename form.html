@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;800&display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="general.css" rel="stylesheet">
+    <!-- favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="">
+    <title>Budokai</title>
+</head>
+<style>
+    input[type=text], select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    
+    input[type=submit] {
+      width: 100%;
+      background-color: #fca103;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    input[type=submit]:hover {
+      background-color: #fc3d036c;
+    }
+    .submitformat {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+    }
+    </style>
+<body>
+    <div class="body-wrapper">
+        <h1>BUDOKAI</h1>
+        <h4>eSports Tournaments</h4>
+        <br>
+        <br>
+        <div class = submitformat >
+        <form>
+            <label for="Game">Choose a Game:</label>
+            <select id="Game" name="Game",size ="6">
+                <option value="chess">Chess</option>
+                <option value="Smash">Smash</option>
+                <option value="Spring Kick 2021">Spring Kick 2021</option>
+                <option value="Rocket League">Rocket League</option>
+                <option value = "Minecraft Creative">Minecraft Creative</option>
+                <option value= "Defend the North">Defend the North</option>
+                <option value= "Let's Make Big Moves">Let's Make Big Moves</option>
+            </select> <br>
+            <label for ="Name"> Name:</label>
+            <input type="text" id="Name" name="Name"><br>
+            <label for ="Date"> Date:</label>
+            <input type="text" id="Date" name="Date"><br>
+            <label for ="Address"> Address:</label>
+            <input type="text" id="Address" name="Address"><br>
+            <input type="submit">	
+        </form>
+        </div>
+    </div>
+</body>
+
+<!-- Bootstrap core JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+</html>
