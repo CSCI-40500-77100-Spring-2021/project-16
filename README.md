@@ -25,12 +25,11 @@ Layers:
     - Config services: UI Config
     - App services: Tournament signup, resources, bracket viewing
     - Integrated services: Youtube/Twitch integration, authentication and authorization
-    - Shared Infrastructure services: Search tournaments, authentication, player data, transaction management for 
-       prize pools
+    - Shared Infrastructure services: Search tournaments, authentication, player data, 
+      transaction management for prize pools
        
     
-Architecture:
-    NoSql databases such as .<br/>
-    We would like to design our system on a public cloud. <br/>
-    We would like to use Node.js and ... . 
+Architecture: <br/>
+    Database:NoSql databases such as Dynamodb. <br/>
+    Platform:We would like to design our system on a public cloud and we will use AWS for our hosting solution. <br/>
     
