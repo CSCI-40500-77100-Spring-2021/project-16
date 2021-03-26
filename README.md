@@ -19,15 +19,12 @@ Important Qualities:
      the architecutre evolvable.
    
 Layers:
+
     - UI: Browser, Budokai Site
-    
     - UI Management: Login, forms management
     - Config services: UI Config
-    
     - App services: Tournament signup, resources, bracket viewing
-    
     - Integrated services: Youtube/Twitch integration, authentication and authorization
-    
     - Shared Infrastructure services: Search tournaments, authentication, player data, transaction management for 
        prize pools
        
