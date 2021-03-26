@@ -15,13 +15,13 @@ Important Qualities:
     - Compatibility: This product would most likely interact with software like Twitch integration.
       Architecture would have to be compatible with that i.e twitch embedds/chat. 
     
-    - Product Lifetime: Can continuously add new features as time goes on, so we would need to make the architecutre evolvable.
+    - Product Lifetime: Can continuously add new features as time goes on, so we would need to make
+     the architecutre evolvable.
    
 Layers:
     - UI: Browser, Budokai Site
     
     - UI Management: Login, forms management
-
     - Config services: UI Config
     
     - App services: Tournament signup, resources, bracket viewing
