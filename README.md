@@ -33,4 +33,7 @@ Architecture: <br/>
     Database:NoSql databases such as Dynamodb. <br/>
     Platform:We would like to design our system on a public cloud and we will use AWS for our hosting solution. <br/>
     Developemnt tools: We are using VScode. <br/>
+   ![image](https://user-images.githubusercontent.com/37669955/112689339-86801180-8e50-11eb-8c8c-bc8f17099721.png)
+
+    
     
