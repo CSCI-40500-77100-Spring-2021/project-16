@@ -17,6 +17,9 @@ does what it is intended to do. We need to make sure only certain people can pos
 because that would affect the viewers and the posters.
 
 Browser -> User Interaction and Autentication management ->  Database management
+
 User Interface- Web Browser
+
 User Interface management- Forms management, Login, tournament page generation
+
 Database management- delete out of date post, manage likes.
