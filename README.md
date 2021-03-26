@@ -11,13 +11,28 @@ To run project on your computer:
 
 
 Important Qualities: 
-    - Compatibility: This product would most likely interact with software like Twitch integration. Architecture would have to be compatible with that
-    -  Product Lifetime: Can continuously add new features as time goes on.
+
+    - Compatibility: This product would most likely interact with software like Twitch integration. Architecture would have to be compatible with that 
+    
+    - Product Lifetime: Can continuously add new features as time goes on, so we would need to make the architecutre evolvable.
+   
 Layers:
     - UI: Browser, Budokai Site
+    
     - UI Management: Login, forms management
+
     - Config services: UI Config
+    
     - App services: Tournament signup, resources, bracket viewing
+    
     - Integrated services: Youtube/Twitch integration, authentication and authorization
+    
     - Shared Infrastructure services: Search tournaments, authentication, player data, transaction management for 
        prize pools
+       
+    
+Architecture:
+    NoSql databases such as .<br/>
+    We would like to design our system on a public cloud. <br/>
+    We would like to use Node.js and ... . 
+    
