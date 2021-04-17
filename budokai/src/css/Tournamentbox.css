@@ -1,0 +1,17 @@
+.caption{
+    padding: 10px 10px 4px 10px;
+    background-color: #e9edf0;
+}
+.name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12pt;
+    color: #083351;
+    font-weight: 500;
+}
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11pt;
+    color: #5f8293;
+    line-height: 23px;
+    font-weight: 200;
+}

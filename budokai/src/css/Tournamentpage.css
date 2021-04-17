@@ -1,0 +1,37 @@
+.body-wrapper {
+    max-width: 1200px;
+    margin: 0px auto;
+
+}
+.eventSection {
+    margin: 30px 0px 15px 12px; 
+    height: 50px;
+    padding: 12px 0px 10px 20px;
+    background-color: #0091b5;
+}
+.hero-img{
+    max-width: 1200px;
+    margin: 0px 0px 0px 100px;
+    display: block;
+   
+}
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16pt;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13pt;
+    color: #083351;
+    font-weight: 300;
+}
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11pt;
+    color: #5f8293;
+    line-height: 23px;
+    font-weight: 200;
+}
