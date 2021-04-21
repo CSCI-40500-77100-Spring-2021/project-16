@@ -8,9 +8,9 @@ Prototype is available [here](https://csci-40500-77100-spring-2021.github.io/pro
 ## Docker 
 
 Step 1. Get the image from Docker Hub: <br>
-`<docker pull alyonak/budokai:0.0.1>`<br>
+`docker pull alyonak/budokai:0.0.1`<br>
 Step 2. Now run the container: <br>
-`<docker run -p 8080:80 budokai:0.0.1>` <br>
+`docker run -p 8080:80 budokai:0.0.1` <br>
 open in browser http://localhost:8080/
 <br>
 
