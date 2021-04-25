@@ -6,6 +6,8 @@ import DTN from './img/DTN.jpeg'
 import Minecraft from './img/Minecraft.png'
 import LMBM from './img/LMBM.jpg'
 import './css/Tournamentbox.css'
+import React, { useState,useEffect  } from 'react';
+
 let images = new Map()
 images.set("SpringK",SpringK)
 images.set("RocketL",RocketL)
@@ -15,6 +17,7 @@ images.set("Minecraft",Minecraft)
 images.set("LMBM",LMBM)
 function Tournamentbox(props)
 {
+    const [like,setLike] = useState(props.likes)
     return(
         <Col md = {4} >
             <a href="/Tournament">
@@ -26,9 +29,9 @@ function Tournamentbox(props)
             </a>
             <Container>
                 <Row>
-                <Col sm ={4}><p>{props.date}</p> </Col>
+                <Col sm ={5}><p>{props.date}</p> </Col>
                 <Col sm ={4}><p>{props.time}</p> </Col>
-                <Col sm ={4}><p>{props.likes}</p></Col>
+                <Col sm ={3}><button className ="but">{like}</button></Col>
                 </Row>
             </Container>
             </div>
