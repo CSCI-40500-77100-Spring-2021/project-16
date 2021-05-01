@@ -1,0 +1,95 @@
+# This file is the main config file for your service.
+service: event
+
+plugins:
+  - serverless-domain-manager
+  - serverless-plugin-log-retention
+  - serverless-prune-plugin
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: ${opt:stage, 'dev'} #take from deploy option: sls deploy --stage STAGE_NAME, 'dev' is a default value
+  logRetentionInDays: 14 # cloudwatch log retention, global value for all functions
+  region: us-east-1
+  memorySize: 128 # optional, in MB
+  timeout: 3 # optional, in seconds
+  lambdaHashingVersion: 20201221
+  iam:
+    role:
+      statements:
+
+#use following code if your function works with DynanoDB, don't forget to add variable name of the table to environment section
+        - Effect: "Allow"
+          Action:
+            - "dynamodb:DeleteItem"
+            - "dynamodb:GetItem"
+            - "dynamodb:PutItem"
+            - "dynamodb:Scan"
+            - "dynamodb:UpdateItem"
+          Resource:
+              Fn::Join:
+                - ""
+                - - "arn:aws:dynamodb:us-east-1:380436282257:"
+                  - "table/"
+                  - "events"
+
+  deploymentBucket:
+    name: dev-budokai-lambda-storage
+    tags: # Tags that will be added to each of the deployment resources
+      stage: ${self:provider.stage}
+
+
+#include all packages
+package:
+  include:
+    - node_modules/**
+
+
+#### don't change this block ####
+custom:
+  customDomain:
+    domainName: budokai.karmazin.me
+    basePath: 'events'
+    stage: ${self:provider.stage}
+    createRoute53Record: false
+  prune:
+    automatic: true
+    number: 3
+#################################
+
+# configuration for each lambda function
+functions:
+  create_event:
+    handler: create_event.handler
+    events:
+      - http:
+          # change path, current is api-dev.mindcue.life/get_user
+          path: create_event
+          # specify what kind of requests are allowed
+          method: POST
+          cors:
+            origin: "*"
+
+  edit_event:
+    handler: edit_event.handler
+    #add following memorySize and timeout only if default values are not enough
+    memorySize: 256 # optional, in MB
+    timeout: 5 # optional, in seconds
+    events:
+      - http:
+          path: edit_event
+          method: PUT
+          cors:
+            origin: "*"
+  
+  delete_event:
+    handler: delete_event.handler
+    #add following memorySize and timeout only if default values are not enough
+    memorySize: 256 # optional, in MB
+    timeout: 5 # optional, in seconds
+    events:
+      - http:
+          path: delete_event
+          method: DELETE
+          cors:
+            origin: "*"
