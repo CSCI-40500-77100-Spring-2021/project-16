@@ -1,6 +1,20 @@
 import {Container,Row,Col} from 'react-bootstrap'
 import SpringK from './img/SpringK.png'
+import RocketL from './img/2.png'
+import chess from './img/chess.jpg'
+import DTN from './img/DTN.jpeg'
+import Minecraft from './img/Minecraft.png'
+import LMBM from './img/LMBM.jpg'
+import Smash from './img/smash.jpg'
 import './css/Tournamentpage.css'
+let images = new Map()
+images.set("Spring Kick 2021",SpringK)
+images.set("Rocket League",RocketL)
+images.set("Chess",chess)
+images.set("Defend the North",DTN)
+images.set("Minecraft Creative",Minecraft)
+images.set("Let's Make Big Moves",LMBM)
+images.set("Smash",Smash)
 function Tournamentpage()
 {
     return(
