@@ -5,16 +5,18 @@ import chess from './img/chess.jpg'
 import DTN from './img/DTN.jpeg'
 import Minecraft from './img/Minecraft.png'
 import LMBM from './img/LMBM.jpg'
+import Smash from './img/smash.jpg'
 import './css/Tournamentbox.css'
 import React, { useState,useEffect  } from 'react';
 
 let images = new Map()
-images.set("SpringK",SpringK)
-images.set("RocketL",RocketL)
+images.set("Spring Kick 2021",SpringK)
+images.set("Rocket League",RocketL)
 images.set("Chess",chess)
-images.set("DTN",DTN)
-images.set("Minecraft",Minecraft)
-images.set("LMBM",LMBM)
+images.set("Defend the North",DTN)
+images.set("Minecraft Creative",Minecraft)
+images.set("Let's Make Big Moves",LMBM)
+images.set("Smash",Smash)
 function Tournamentbox(props)
 {
     const [like,setLike] = useState(props.likes)
