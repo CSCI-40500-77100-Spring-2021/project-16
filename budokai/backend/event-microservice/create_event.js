@@ -22,11 +22,14 @@ exports.handler = async (event, context) => {
         "game":payload.game.toString(),
         "hostName":payload.hostName.toString(),
         "eventDate":payload.eventDate.toString(),
+        "time": payload.time.toString(),
         "price":payload.price.toString(),
+        "prize":payload.prize.toString(),
         "address":payload.address.toString(),
         "registration":payload.registration.toString(),
         "description":payload.description.toString(),
-        "stream":payload.stream.toString()
+        "stream":payload.stream.toString(),
+        "type": payload.type.toString()
        }
     };
 
