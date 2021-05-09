@@ -70,26 +70,26 @@ functions:
           cors:
             origin: "*"
 
-  edit_event:
-    handler: edit_event.handler
+  get_event:
+    handler: get_event.handler
     #add following memorySize and timeout only if default values are not enough
     memorySize: 256 # optional, in MB
     timeout: 5 # optional, in seconds
     events:
       - http:
-          path: edit_event
-          method: PUT
+          path: get_event
+          method: GET
           cors:
             origin: "*"
   
-  delete_event:
-    handler: delete_event.handler
+  get_events:
+    handler: get_events.handler
     #add following memorySize and timeout only if default values are not enough
     memorySize: 256 # optional, in MB
     timeout: 5 # optional, in seconds
     events:
       - http:
-          path: delete_event
-          method: DELETE
+          path: get_events
+          method: GET
           cors:
             origin: "*"
