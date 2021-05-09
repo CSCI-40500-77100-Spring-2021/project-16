@@ -1,6 +1,7 @@
 'use strict';
 
 const AWS= require('aws-sdk');
+var data;
 
 exports.handler = async (event, context) => {
     //instantiate document client instance
@@ -10,23 +11,27 @@ exports.handler = async (event, context) => {
     //parse body
     let payload = JSON.parse(event.body);
 
-    //enter code here
+    //parameters for table
+    const params = {
+       TableName: "events",
+       Select: "ALL_ATTRIBUTES"
+    };
 
     try {
-        let data = await docClient.put(params).promise();
+        data = await docClient.scan(params).promise();
         statusCode = 200;
     } catch(err) {
         statusCode = 403;
     }
 
-    var responseBody = {
-        //enter response body
-    };
+    var responseBody = JSON.stringify(data);
 
     let response = {
         "statusCode": statusCode,
         "headers": {
-            "content-type": "application/json"
+            "content-type": "application/json",
+            "Access-Control-Allow-Origin" : "*",
+            "Access-Control-Allow-Credentials" : true
         },
         "body": JSON.stringify(responseBody),
         "isBase64Encoded": false,
@@ -34,3 +39,4 @@ exports.handler = async (event, context) => {
 
     return response;
 };
+

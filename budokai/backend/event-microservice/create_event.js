@@ -16,18 +16,21 @@ exports.handler = async (event, context) => {
 
     //parameters for insertion into Diaries table
     const params = {
-       TableName: "events",
-       Item:{
-        "eventId":id.toString(),
-        "game":payload.game.toString(),
-        "hostName":payload.hostName.toString(),
-        "eventDate":payload.eventDate.toString(),
-        "price":payload.price.toString(),
-        "address":payload.address.toString(),
-        "registration":payload.registration.toString(),
-        "description":payload.description.toString(),
-        "stream":payload.stream.toString()
-       }
+        TableName: "events",
+        Item:{
+            "eventId":id.toString(),
+            "game":payload.game.toString(),
+            "hostName":payload.hostName.toString(),
+            "eventDate":payload.eventDate.toString(),
+            "time": payload.time.toString(),
+            "price":payload.price.toString(),
+            "prize":payload.prize.toString(),
+            "address":payload.address.toString(),
+            "registration":payload.registration.toString(),
+            "description":payload.description.toString(),
+            "stream":payload.stream.toString(),
+            "type": payload.type.toString()
+        }
     };
 
     try {
@@ -44,7 +47,9 @@ exports.handler = async (event, context) => {
     let response = {
         "statusCode": statusCode,
         "headers": {
-            "content-type": "application/json"
+            "content-type": "application/json",
+            "Access-Control-Allow-Origin" : "*",
+            "Access-Control-Allow-Credentials" : true
         },
         "body": JSON.stringify(responseBody),
         "isBase64Encoded": false,
@@ -52,4 +57,3 @@ exports.handler = async (event, context) => {
 
     return response;
 };
-
