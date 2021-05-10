@@ -15,3 +15,12 @@ p {
     line-height: 23px;
     font-weight: 200;
 }
+.but{
+    color: white;
+    font-weight: 500;
+    background-color: #fca103;
+    width: 45px;
+    padding: 0px;
+    margin: 0px 0px;
+
+}
