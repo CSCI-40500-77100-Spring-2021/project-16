@@ -10,6 +10,8 @@
     background-color: #0091b5;
 }
 .hero-img{
+    width:1000px;
+    height:600px;
     max-width: 1200px;
     margin: 0px 0px 0px 100px;
     display: block;
