@@ -99,7 +99,8 @@ class Form extends Component{
             registration: this.state.Register,
             description: this.state.Description,
             stream: this.state.Stream,
-            type: this.state.Type
+            type: this.state.Type,
+            likes: 0
         }
         axios.post('https://budokai.karmazin.me/events/create_event',{data})
         .then(res =>{
