@@ -6,9 +6,10 @@ import DTN from './img/DTN.jpeg'
 import Minecraft from './img/Minecraft.png'
 import LMBM from './img/LMBM.jpg'
 import Smash from './img/smash.jpg'
+
 import './css/Tournamentbox.css'
 import React, { useState,useEffect  } from 'react';
-
+import {Link, useParams} from "react-router-dom";
 let images = new Map()
 images.set("Spring Kick 2021",SpringK)
 images.set("Rocket League",RocketL)
@@ -20,15 +21,16 @@ images.set("Smash",Smash)
 function Tournamentbox(props)
 {
     const [like,setLike] = useState(props.likes)
+    const [id,setId] = useState(props.id)
     return(
         <Col md = {4} >
-            <a href="/Tournament">
+            <Link to={`/tournament/${id}`} > 
             <img src={images.get(props.game)} alt="Spring Kick" style={{width : '100%'}}/> 
-            </a>
+            </Link>
             <div className ="caption">
-            <a href="/Tournament">
+            <Link to={`/tournament/${id}`} > 
             <h6 className="name" >{props.name}</h6>
-            </a>
+            </Link>
             <Container>
                 <Row>
                 <Col sm ={5}><p>{props.date}</p> </Col>
