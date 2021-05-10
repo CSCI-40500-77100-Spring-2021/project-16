@@ -16,7 +16,7 @@ function App() {
           <Route exact path="/forum">
             <Form />
           </Route>
-          <Route exact path="/Tournament">
+          <Route path="/Tournament/:id">
             <Tournamentpage/>
           </Route>
         </Switch>
