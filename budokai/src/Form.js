@@ -1,4 +1,7 @@
 import React,{ Component } from 'react'
+import axios from 'axios';
+import { withRouter } from "react-router-dom";
+
 import './css/Form.css'
 class Form extends Component{
   constructor(props){
@@ -7,7 +10,7 @@ class Form extends Component{
     Games:'Chess',
     Date:'',
     Time:'',
-    Entry_Prize:'',
+    Entry_Price:'',
     Prize:'',
     Address:'',
     Register:'',
@@ -30,7 +33,7 @@ class Form extends Component{
   validate =()=>{
     const stream = /https:\/\/www\.twitch\.tv\/(?!.+\/profile).*/
     const money = /^-?(?:0|[1-9]\d{0,2}(?:,?\d{3})*)(?:\.\d+)?$/
-    const address =/\d+(\s+\w+){1,}\s+(?:st(?:\.|reet)?|dr(?:\.|ive)?|pl(?:\.|ace)?|ave(?:\.|nue)?|rd|road|lane|drive|way|court|plaza|square|run|parkway|point|pike|square|driveway|trace|park|terrace|blvd)/
+    const address =/^[a-zA-Z0-9\s\,\''\-]*$/
 
     this.setState({validName : ""})
     this.setState({validEntry: ""})
@@ -40,7 +43,6 @@ class Form extends Component{
     this.setState({validAdd : ""})
     this.setState({validStream : ""})
 
-    console.log(this.state.validName + " asdasd")
     let valid = true 
     if(!this.state.Name)
     {
@@ -48,9 +50,9 @@ class Form extends Component{
         console.log("this")
         valid = false
     }
-    if(!money.test(this.state.Entry_Prize))
+    if(!money.test(this.state.Entry_Price))
     {
-        this.setState({validEntry: "Please fill out Entry Prize/If Free = 0"});
+        this.setState({validEntry: "Please fill out Entry Price/If Free = 0"});
         valid = false
     }
     if(!money.test(this.state.Prize))
@@ -84,7 +86,27 @@ class Form extends Component{
   handleSubmit(event){
     event.preventDefault();
     const answer = this.validate()
-    console.log(answer)
+    if(answer)
+    {
+        const data = {
+            game: this.state.Games,
+            hostName: this.state.Name,
+            eventDate: this.state.Date,
+            time: this.state.Time,
+            price: "$"+this.state.Entry_Price,
+            prize: "$"+this.state.Prize,
+            address: this.state.Address,
+            registration: this.state.Register,
+            description: this.state.Description,
+            stream: this.state.Stream,
+            type: this.state.Type
+        }
+        axios.post('https://budokai.karmazin.me/events/create_event',{data})
+        .then(res =>{
+            this.props.history.push("/");
+        }
+        )
+    }
   }
   
   handleChange(event){
@@ -148,12 +170,12 @@ class Form extends Component{
             />
         </div>
         <div>
-            <label htmlFor='Entry_Prize'>Entry Prize</label><br/>
+            <label htmlFor='Entry_Price'>Entry Price</label><br/>
             <input
-                name ='Entry_Prize'
-                placeholder ='Enter Prize'
+                name ='Entry_Price'
+                placeholder ='Enter Price'
                 type="text"
-                value = {this.state.Entry_Prize}
+                value = {this.state.Entry_Price}
                 onChange = {this.handleChange}
             />
             <div style={{ fontSize: 12, color: "red" }}>
@@ -244,4 +266,4 @@ class Form extends Component{
   }
 }
   
-export default Form
+export default withRouter(Form);
