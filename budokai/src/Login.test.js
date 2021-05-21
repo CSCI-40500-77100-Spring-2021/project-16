@@ -16,6 +16,10 @@ test("validate login",()=>{
     expect(validate("test@gmail.com","Abcdef888#")).toBe(true)
 }
 )
+test("validate login",()=>{
+    expect(validate("test1@gmail.com","Abcdef888#")).toBe(true)
+}
+)
 test("validate login with empty email",()=>{
     expect(validate("","Abcdef888#")).toBe(false)
 }
