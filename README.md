@@ -4,6 +4,9 @@
 Budokai will help nurture newcomers by pointing them in the direction of resources to keep them engaged with the games in question. 
 This can range from community Discord servers, Twitch/Youtube streams, and official avenues to get involved with the games in question.
 Prototype is available [here](https://csci-40500-77100-spring-2021.github.io/project-16/)
+## Status
+![example workflow](https://github.com/CSCI-40500-77100-Spring-2021/project16/docs/actions/workflows/node.js.yml/badge.svg)
+
 
 ## Docker 
 
