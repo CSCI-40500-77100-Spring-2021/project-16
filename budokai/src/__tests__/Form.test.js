@@ -1,5 +1,4 @@
 import React from "react";
-import Form from './Form'
 
 
 
@@ -112,7 +111,7 @@ const validate = (name,price,prize,register,description,addressp,streamp)=>{
       "Lorem",
       "Ipsum"
       ,"ABC 123"
-      ,"https://www.twitch.tv/loltyler1")).toBe(false)
+      ,"https://www.twitch.tv/loltyler1")).toBe(true)
     
   })
   test('validate form information with wrong link', ()=>
