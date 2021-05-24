@@ -41,6 +41,6 @@ test("validate login with invalid password password",()=>{
 }
 )
 test("validate login with invalid password password",()=>{
-    expect(validate("test@gmail.com","Abcdef!()123")).toBe(false)
+    expect(validate("test@gmail.com","Abcdef!()123")).toBe(true)
 }
 )
