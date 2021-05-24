@@ -1,16 +1,16 @@
 'use strict';
 
-const get_event = require('../get_event');
-const get_events = require('../get_events');
-const create_event = require('../create_event')
-const dynamoDBcalls = require('../dynamoDBcalls');
+const get_event = require('../../backend/event-microservice/get_event');
+const get_events = require('../../backend/event-microservice/get_events');
+const create_event = require('../../backend/event-microservice/create_event')
+const dynamoDBcalls = require('../../backend/event-microservice/dynamoDBcalls');
 
 const event =
     {
         "body": null
     }
 
-describe('responses', () => {
+describe('lambda functions responses', () => {
 //test responses of lambda functions
     test('response of get_event is an object', () => {
         expect(typeof get_event).toBe('object');
